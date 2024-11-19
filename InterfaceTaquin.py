@@ -141,6 +141,11 @@ class InterfaceTaquin:
         if not self.taquin:
             messagebox.showerror("Erreur", "Veuillez mélanger le taquin d'abord.")
             return
+        
+        if self.taquin.etat_initial == self.taquin.etat_final:
+            messagebox.showinfo("Information", "Le Taquin est déjà résolu.")
+            return
+
 
         self.strategie = Strategies(self.taquin)
         algo = self.choix_strategie.get()
