@@ -1,8 +1,6 @@
 import random
 from typing import List, Tuple
 
-# Régler le probleme où lorsque l'on mélange on a déjà l'état final 
-
 class Taquin:
     def __init__(self, taille: int):
         self.taille = taille
