@@ -3,6 +3,7 @@ import colorsys
 from tkinter import messagebox
 from Taquin import Taquin
 from Strategies import Strategies
+import time 
 
 class InterfaceTaquin:
     def __init__(self, root):
@@ -20,6 +21,9 @@ class InterfaceTaquin:
 
         self.root.configure(bg="#f5f5f5")
 
+        self.label_temps = tk.Label(root, text="", font=("Helvetica", 12), bg="#f5f5f5", fg="#333333")
+        self.label_temps.pack(pady=5)
+        
         # Création de  l'interface
         self.creer_grille()
         self.creer_controles()
@@ -41,7 +45,7 @@ class InterfaceTaquin:
         taille_label.pack(side=tk.LEFT, padx=10)
 
         self.taille_entry = tk.Entry(frame, font=("Helvetica", 12), width=5, justify='center')
-        self.taille_entry.insert(tk.END, str(self.taille))  # Insérer la taille actuelle
+        self.taille_entry.insert(tk.END, str(self.taille))
         self.taille_entry.pack(side=tk.LEFT, padx=10)
 
         # Appliquer la taille saisie
@@ -77,7 +81,6 @@ class InterfaceTaquin:
         self.index_parcours = 0
         self.rafraichir_grille()
 
-        # Si un cadre existe, on le supprime
         if self.navigation_frame:
             self.navigation_frame.destroy()
             self.navigation_frame = None
@@ -130,11 +133,7 @@ class InterfaceTaquin:
                 valeur = etat[i][j]
                 texte = "" if valeur == 0 else str(valeur)
                 couleur = self.obtenir_couleur(valeur, palette)
-                self.boutons[i][j].config(
-                    text=texte,
-                    state="normal" if valeur != 0 else "disabled",
-                    bg=couleur
-                )
+                self.boutons[i][j].config(text=texte,state="normal" if valeur != 0 else "disabled",bg=couleur)
 
     def resoudre(self):
         """Résoudre le taquin."""
@@ -151,6 +150,8 @@ class InterfaceTaquin:
         algo = self.choix_strategie.get()
         avec_parcours = self.mode_parcours.get()
 
+        start_time = time.time()
+        
         if algo == "dfs":
             solution, parcours = self.strategie.dfs(avec_parcours=True)
         elif algo == "bfs":
@@ -160,6 +161,9 @@ class InterfaceTaquin:
         else:
             messagebox.showerror("Erreur", "Stratégie inconnue.")
             return
+        
+        end_time = time.time()
+        temps_execution = end_time - start_time
 
         if avec_parcours:
             self.parcours = parcours
@@ -170,6 +174,8 @@ class InterfaceTaquin:
             self.index_parcours = 0
             self.maj_grille(self.solution[self.index_parcours])
 
+        self.label_temps.config(text=f"Temps d'exécution : {temps_execution:.3f} secondes")
+       
         # Si un cadre existe, on le supprime
         if self.navigation_frame:
             self.navigation_frame.destroy()
