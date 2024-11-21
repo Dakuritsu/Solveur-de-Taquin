@@ -86,6 +86,19 @@ La version terminal suit une logique textuelle. Voici son fonctionnement :
 
 ---
 
+## Exemple de comparatif des stratégies
+
+#### Premier exemple :
+![Taquin DFS](Screen/Comparatif_Exemple/1/dfs.PNG)
+Pour la stratégie DFS, on trouve en 0.295 secondes une solution en 3628 étapes et un parcours total en 5789 étapes.
+
+![Taquin BFS](Screen/Comparatif_Exemple/1/bfs.PNG)
+Pour la stratégie BFS, on trouve en 0.753 secondes une solution en 20 étapes et un parcours total en 76525 étapes.
+
+![Taquin A*](Screen/Comparatif_Exemple/1/a_etoile.PNG)
+Pour la stratégie A*, on trouve en 0.000 secondes une solution en 20 étapes et un parcours total en 1244 étapes.
+
+---
 ## Screenshots
 
 ![Taquin Terminal](Screen/Screen_terminal.PNG)
