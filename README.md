@@ -2,6 +2,8 @@
 
 Ce projet implémente un solveur pour le jeu du Taquin, un puzzle consistant à déplacer des cases sur une grille pour atteindre un état final. L'interface graphique est construite avec la bibliothèque **Tkinter**, et le solveur utilise plusieurs algorithmes de recherche pour résoudre le puzzle : **DFS**, **BFS** et **A\***.
 
+---
+
 ## Fonctionnalités
 
 - **Interface graphique** intuitive avec Tkinter pour interagir avec le puzzle.
@@ -16,11 +18,15 @@ Ce projet implémente un solveur pour le jeu du Taquin, un puzzle consistant à 
 
 Ce projet utilise la bibliothèque Tkinter pour l'interface graphique et la bibliothèque `colorsys` pour générer des couleurs.
 
+---
+
 ## Exécutez le fichier principal :
 
 python main.py
 
 Cela vous demandera ensuite de choisir d'utiliser l'interface graphique ou non pour la résolution du taquin.
+
+---
 
 ## Fonctionnement 
 
@@ -61,12 +67,15 @@ La version terminal suit une logique textuelle. Voici son fonctionnement :
 - Le terminal affichera **chaque étape** (si demandée) ou **uniquement la solution finale**.
 - Les performances (**temps d'exécution**, **nombre de nœuds explorés**) seront également affichées.
 
+---
+
 ## Algorithmes
 
 - **DFS (Depth-First Search)** : Une recherche en profondeur qui explore un chemin jusqu'à son extrémité avant de revenir en arrière.
 - **BFS (Breadth-First Search)** : Une recherche en largeur qui explore tous les voisins d'un état avant de passer aux niveaux suivants.
 - **A*** : Un algorithme de recherche informée qui utilise une heuristique pour guider la recherche vers la solution.
 
+---
 
 ## Structure du projet
 
