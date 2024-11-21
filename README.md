@@ -10,6 +10,8 @@ Ce projet implémente un solveur pour le jeu du Taquin, un puzzle consistant à 
 - **Personnalisation** de la taille du Taquin.
 - **Affichage dynamique** des étapes avec mise à jour en temps réel de l'interface.
 
+---
+
 ## Bibliothèques nécessaires
 
 Ce projet utilise la bibliothèque Tkinter pour l'interface graphique et la bibliothèque `colorsys` pour générer des couleurs.
