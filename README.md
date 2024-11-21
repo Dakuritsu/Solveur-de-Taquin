@@ -100,6 +100,12 @@ Pour la stratégie BFS, on trouve en 0.753 secondes une solution en 20 étapes e
 ![Taquin A*](Screen/Comparatif_Exemple/1/a_etoile.PNG)
 Pour la stratégie A*, on trouve en 0.000 secondes une solution en 20 étapes et un parcours total en 1244 étapes.
 
+
+#### Deuxième exemple :
+
+![Taquin A*](Screen/Comparatif_Exemple/2/a_etoile.PNG)
+Pour la stratégie A*, on trouve en 77.092 secondes une solution en 47 étapes et un parcours total en 1641681 étapes.
+Les stratégies BFS et DFS n'ont pas pu apporter un résultat pour raison de calcul trop important.
 ---
 ## Screenshots
 
