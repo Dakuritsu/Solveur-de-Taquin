@@ -83,3 +83,12 @@ La version terminal suit une logique textuelle. Voici son fonctionnement :
 - **`Taquin.py`** : Classe représentant le puzzle du Taquin, incluant les méthodes pour mélanger et résoudre le puzzle. Sert également de version terminal.
 - **`Strategies.py`** : Contient les différentes stratégies de résolution (`DFS`, `BFS`, `A*`).
 - **`InterfaceTaquin.py`** : Classe contenant l'interface graphique de l'application, y compris la gestion de la grille, des boutons et des contrôles.
+
+---
+
+## Screenshots
+
+![Taquin Terminal](Screen/Screen_terminal.PNG)
+
+![Taquin Interface Graphique](Screen/Screen_Interface_Graphique.PNG)
+
